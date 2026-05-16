@@ -5,5 +5,5 @@
  xgboost
  catboost
  scikit-learn
-
+ dill
 # -e .

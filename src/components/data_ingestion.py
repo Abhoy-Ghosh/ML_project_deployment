@@ -33,6 +33,9 @@ from dataclasses import dataclass
 # Used to create configuration class easily
 # Automatically generates constructor (__init__)
 
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+
 
 # =========================================================
 # CONFIGURATION CLASS
@@ -222,6 +225,7 @@ if __name__ == "__main__":
     # Creating object of DataIngestion class
 
     obj = DataIngestion()
+    train_data,test_data =obj.initiate_data_ingestion()
 
     # Calling ingestion pipeline
 
@@ -231,6 +235,12 @@ if __name__ == "__main__":
 
     print(train_path)
     print(test_path)
+
+    # intiating data transformation
+    data_transformation = DataTransformation()
+    train_arr,test_arr,_ =data_transformation.initiate_data_transformation(train_data,test_data)
+
+
 
 
 # =========================================================
