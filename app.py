@@ -132,7 +132,6 @@ async def predict_datapoint(
         # =================================================
 
         return templates.TemplateResponse(
-            request, 
             
             "index.html",
 
